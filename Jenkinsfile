@@ -1,5 +1,4 @@
 pipeline {
-   agent any
    properties([
      parameters([
        string(name: 'checkParam', defaultValue: '')
@@ -17,7 +16,9 @@ pipeline {
      }
 
      stage('TestCheckParam') {
+        steps {
          echo "${params.checkParam} World!"
+        }
      }
 
    }
