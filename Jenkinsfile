@@ -1,5 +1,6 @@
 pipeline {
-   properties([
+   agent any
+   options([
      parameters([
        string(name: 'checkParam', defaultValue: '')
      ])
