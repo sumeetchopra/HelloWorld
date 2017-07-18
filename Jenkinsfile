@@ -1,10 +1,6 @@
 pipeline {
    agent any
-   properties([
-     parameters([
-       string(name: 'checkParam', defaultValue: '')
-     ])
-   ])
+   properties([parameters([string(defaultValue: '', description: '', name: 'checkParam')]), pipelineTriggers([])])
    stages {
      stage('Build') {
          steps {
