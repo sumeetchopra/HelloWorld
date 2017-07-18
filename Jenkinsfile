@@ -1,6 +1,6 @@
 pipeline {
    agent any
-   options{parameters([string(defaultValue: '', description: '', name: 'checkParam')])}
+   parameters([string(defaultValue: '', description: '', name: 'checkParam')])
    stages {
      stage('Build') {
          steps {
