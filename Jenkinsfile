@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                echo 'Hello ${params.checkParam}'
+                echo "Hello ${params.checkParam} !"
             }
         }
     }
