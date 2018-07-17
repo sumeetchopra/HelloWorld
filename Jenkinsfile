@@ -1,12 +1,20 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'checkParam', defaultValue: '', description: '')
-    }
+
     stages {
-        stage('disp') {
+        stage('Build') {
             steps {
-                echo "${params.checkParam} World!"
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
